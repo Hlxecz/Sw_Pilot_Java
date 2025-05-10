@@ -1,0 +1,7 @@
+# IntelliJ 환경 관련 무시
+.idea/
+*.iml
+
+# 빌드된 파일 무시
+*.class
+out/
