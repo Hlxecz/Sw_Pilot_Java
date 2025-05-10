@@ -4,7 +4,7 @@ import static java.lang.System.exit;
 class HelloBiodome04 {
     static final double PIE = 3.14;
     static final double BEO = 0.415;
-asdfasfsafㅇㄴㄹㄴㅁ
+
     public static void main(String[] args) {
         double hum , tem, oxy = 0.0; //습도 , 온도, 산소s
         boolean check;
