@@ -18,6 +18,7 @@ class HelloBiodome04 {
                 oxy = Double.parseDouble(args[2]);
 
                 check = rangeCheck(tem,hum,oxy);
+
                 if(!check){
                     System.out.println("검토 결과에 따른 결과(안전/확인필요)");
                     exit(0);
@@ -60,26 +61,30 @@ class HelloBiodome04 {
         if (10.0 >= tem || tem > 27.5) { // 4
             System.out.println("온도값이 정상 범위를 벗어났습니다.");
             cnt += 4;
-            Ck = false;
         }
-        if (40.0 > hum || hum > 60.0) { // 2
+        if (40.0 > hum || hum > 60.1) { // 2
             System.out.println("습도값이 정상 범위를 벗어났습니다.");
             cnt += 2;
-            Ck = false;
         }
         if(19.5 >= oxy || oxy >=23.5){ // 1
             System.out.println("산소 농도값이 정상 범위를 벗어났습니다.");
             cnt += 1;
-            Ck = false;
         }
 
         switch (cnt){
+            case 7:
+                Ck = false;
+                System.out.println("전부 범위를 벗어 났습니다.");
+                break;
             case 6:
+                Ck = false;
                 System.out.println("온도와 습도는 동시에 정상범위를 벗어날 수 없습니다.");
-                exit(0);
                 break;
             case 0:
                 System.out.println("생명의 나무는 안정적인 상태입니다.");
+                break;
+            default:
+                System.out.println("생명의 나무는 불안정인 상태입니다.");
                 break;
         }
 

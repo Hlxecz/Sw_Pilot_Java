@@ -42,6 +42,7 @@ public class HelloBiodome02 {
     public static void Percent(double[] fvals,int sum){
         //비율 구하기
         //새로운 배열로 확장성 까지 고려 해봤음
+
         double[] ratio = new double[3];
         for (int i = 0; i < fvals.length; i++) {
             ratio[i] = fvals[i] / sum * 100;
