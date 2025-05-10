@@ -7,7 +7,7 @@
 public class HelloBiodome01 {
     public static void main(String[] args) {
         System.out.print("이름을 입력해주세요 : ");
-
+ㅁㅇㄹㅁㄴㅇㄹ
         if(args.length > 0) {
             String name = String.join(" ",args);
             System.out.printf(" \"%s\" 님 ! 스프링와트에 오신것 환영합니다 !",name);
