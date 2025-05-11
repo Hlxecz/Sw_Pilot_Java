@@ -60,20 +60,31 @@ class HelloBiodome04 {
         if (10.0 >= tem || tem > 27.5) { // 4
             System.out.println("온도값이 정상 범위를 벗어났습니다.");
             cnt += 4;
+
         }
+        if (40.0 > hum || hum > 60.0) { // 2
             System.out.println("습도값이 정상 범위를 벗어났습니다.");
             cnt += 2;
+
         }
         if(19.5 >= oxy || oxy >=23.5){ // 1
             System.out.println("산소 농도값이 정상 범위를 벗어났습니다.");
             cnt += 1;
-            Ck = false;
+
+        }
+
+        switch (cnt){
+            case 7:
+                Ck = false;
+                System.out.println("전부 범위를 벗어 났습니다.");
+                break;
             case 6:
+                Ck = false;
                 System.out.println("온도와 습도는 동시에 정상범위를 벗어날 수 없습니다.");
                 break;
             case 0:
                 System.out.println("생명의 나무는 안정적인 상태입니다.");
-                break;
+
         }
 
         return Ck;
