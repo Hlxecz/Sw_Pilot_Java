@@ -74,6 +74,7 @@ class HelloBiodome03 {
     // main 메서드에서 호출 합니다
     // main 메서드는  static 메서드이기 때문에 호출 하는 메서드도 정적인 메서드가 되어야지
     // main 에서 호출 할 수 있게됩니다 그렇기 대문에  humcal도 static으로 선언되어야 객체 생성 없이 직접 호출할 수 있다.
+
     public static double humSqrt(double hum){
 
             //바밀로니아 알고리즘
@@ -92,4 +93,14 @@ class HelloBiodome03 {
 
         return guess;
     }
+    
+    //재귀함수 참고 -> 바밀로니아 같은 식 반복 줄이기
+    /*private static double squareRoot = 1.0;
+
+    static void root(double value) {
+        if (squareRoot == (squareRoot + (value / squareRoot)) / 2) return;
+        squareRoot = (squareRoot + (value / squareRoot)) / 2;
+        root(value);
+    } */
+
 }
