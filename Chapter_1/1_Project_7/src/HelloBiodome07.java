@@ -32,7 +32,7 @@ public class HelloBiodome07 {
             //이전 문자 확인 prev (0부터 시작)
             char prev = input.charAt(i - 1);
 
-            // 공백이고, 허용 문자아니면 null 반환
+            // 공백이아니고, 허용 문자아니면 null 반환
             if (dna.indexOf(prev) == -1 && prev != ' ') {
                 return null;
             }
