@@ -75,8 +75,9 @@ class HelloBiodome04 {
 
         switch (cnt){
             case 7:
+            case 5:
+            case 3:
                 Ck = false;
-                System.out.println("전부 범위를 벗어 났습니다.");
                 break;
             case 6:
                 Ck = false;
