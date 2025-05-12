@@ -10,7 +10,7 @@ public class HelloBiodome06 {
             rangeCheck(gene1,gene2);
 
             boolean check = true;
-            int i = 0;
+
             // Math min 함수로  while 반복 회수 정하기
             int minValue = Math.min(gene1.length(),gene2.length());
             //Math 못쓰면 아래의 코드 사용
@@ -21,6 +21,7 @@ public class HelloBiodome06 {
             char[] two = gene2.toCharArray();
 
 
+            int i = 0;
 
             while (check) {
                 if (i < minValue) {

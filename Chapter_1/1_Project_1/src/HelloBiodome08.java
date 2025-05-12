@@ -23,13 +23,14 @@ public class HelloBiodome08 {
                 "any", "thanks", "the", "for", "solution", "can", "?"
         };
 
-        //sort 정렬 결과를 return 받지 않아도 되고, dic 자체가 바뀜
+         //sort 정렬 결과를 return 받지 않아도 되고, dic 자체가 바뀜
         //comparing 타입 length길이별 .내림차순()
         Arrays.sort(dictionary, comparing(String::length).reversed());
 
         String result = splitSentence(input, dictionary);
         System.out.println(result);
     }
+
 
     public static String splitSentence(String input, String[] dictionary) {
         StringBuilder result = new StringBuilder();
@@ -97,7 +98,7 @@ public class HelloBiodome08 {
     }
 }
 
-//canwebelieveinyou?
+//canwebelieveinyoufor?
 //사전: can, we, you, ? 있음. believein 없음.
 //
 //can → 매치됨 → 추가됨

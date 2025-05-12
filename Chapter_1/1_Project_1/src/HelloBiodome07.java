@@ -2,6 +2,7 @@ import static java.lang.System.exit;
 
 public class HelloBiodome07 {
     public static void main(String[] args) {
+
         if (args.length == 0 || args[0].trim().isEmpty()) {
             System.out.println("염기서열이 입력되지 않았습니다.");
             exit(0);
@@ -36,13 +37,14 @@ public class HelloBiodome07 {
             if (dna.indexOf(prev) == -1 && prev != ' ') {
                 return null;
             }
-            
+
             //마지막 단어 전까지 돌아가기 / 현재의 문자와 이전의 문자의 비교 같다면 카운트 ++
             if (i < input.length() && input.charAt(i) == prev) {
                 count++;
             } else {
                 //아니면 string에 추가
                 result += prev;
+
                 if (count > 1) {
                     result += count;
                 }
