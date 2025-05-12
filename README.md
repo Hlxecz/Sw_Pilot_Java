@@ -1,4 +1,5 @@
-# 📘 (Sw_Pilot_3기) Java Study - Chapter Practice Code 
+# 📘 (Sw_Pilot_3기)
+# Java Study - Chapter Practice Code 
 
 이 저장소는 Java 기초 문법과 구조를 학습하며 직접 작성한 실습 코드를 정리한 공간입니다.  
 각 챕터별로 주제에 맞는 프로젝트들이 폴더로 정리되어 있습니다.
