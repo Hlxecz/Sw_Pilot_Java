@@ -13,7 +13,7 @@ public class RoadToBiodome02 {
                 System.out.println("영문자, 숫자, 한글, 공백만 포함해야 합니다.");
                 System.exit(0);
             }
-            
+
             // 단어 단위로 나누기
             String[] sens = sen.split(" ");
 
