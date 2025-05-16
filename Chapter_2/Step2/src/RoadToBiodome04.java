@@ -5,7 +5,7 @@ public class RoadToBiodome04 {
             return;
         }
 
-        // 단일 배열 입력: 평균 + 중앙값 출력
+        // 단일 배열 입력 -> 평균 + 중앙값 출력
         if (args.length == 1) {
             String input = args[0].replaceAll("\\[|\\]", "");
             String[] tokens = input.split(",\\s*");
@@ -24,9 +24,9 @@ public class RoadToBiodome04 {
             // 중앙값
             centerValue(numbers);
 
-            System.out.println(); // 줄바꿈
+            System.out.println();
         }
-        // 두 개 이상 입력: 각 배열의 중앙값만 출력
+        // 두 개 이상 입력 -> 각 배열의 중앙값만 출력
         else {
             for (String arg : args) {
                 String input = arg.replaceAll("\\[|\\]", "");
@@ -40,6 +40,7 @@ public class RoadToBiodome04 {
                 // 선택 정렬
                 sortValue(numbers);
 
+                System.out.print(arg + " ->");
                 // 중앙값만 출력
                 centerValue(numbers);
                 System.out.println(); // 줄바꿈
