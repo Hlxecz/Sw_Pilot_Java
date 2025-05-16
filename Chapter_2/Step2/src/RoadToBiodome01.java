@@ -9,11 +9,13 @@ public class RoadToBiodome01 {
             return;
         }
 
-        // 대괄호 제거
-        String input = args[0].replaceAll("\\[|\\]","");
+        // input 대괄호 제거
         // 쉽표 기준 뒤에 공백도 다제거
         // a,    b,  c -> [a,b,c]
-        String[] tokens = input.split(",\\s*");
+        String[] tokens = args[0].replaceAll("\\[|\\]","").split(",\\s*");
+
+
+
         List<Integer> list = new ArrayList<>();
 
         try {

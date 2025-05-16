@@ -7,8 +7,9 @@ public class RoadToBiodome04 {
 
         // 단일 배열 입력 -> 평균 + 중앙값 출력
         if (args.length == 1) {
-            String input = args[0].replaceAll("\\[|\\]", "");
-            String[] tokens = input.split(",\\s*");
+
+            String[] tokens = args[0].replaceAll("\\[|\\]", "").split(",\\s*");
+
 
             int[] numbers = new int[tokens.length];
             for (int i = 0; i < tokens.length; i++) {
@@ -29,8 +30,8 @@ public class RoadToBiodome04 {
         // 두 개 이상 입력 -> 각 배열의 중앙값만 출력
         else {
             for (String arg : args) {
-                String input = arg.replaceAll("\\[|\\]", "");
-                String[] tokens = input.split(",\\s*");
+
+                String[] tokens = arg.replaceAll("\\[|\\]", "").split(",\\s*");
 
                 int[] numbers = new int[tokens.length];
                 for (int i = 0; i < tokens.length; i++) {

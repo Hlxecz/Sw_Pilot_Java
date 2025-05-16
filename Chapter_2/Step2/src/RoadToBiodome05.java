@@ -6,8 +6,7 @@ public class RoadToBiodome05 {
         }
 
         // 두 배열 입력을 합치고 대괄호 제거
-        String input = String.join(" ", args).replaceAll("\\[|\\]", "");
-        String[] tokens = input.split("[,\\s]+");
+        String[] tokens  = String.join(" ", args).replaceAll("\\[|\\]", "").split("[,\\s]+");
 
         int[] numbers = new int[tokens.length];
 
