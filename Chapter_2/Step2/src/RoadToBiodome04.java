@@ -37,7 +37,6 @@ public class RoadToBiodome04 {
                 for (int i = 0; i < tokens.length; i++) {
                     numbers[i] = Integer.parseInt(tokens[i]);
                 }
-
                 // 선택 정렬
                 sortValue(numbers);
 

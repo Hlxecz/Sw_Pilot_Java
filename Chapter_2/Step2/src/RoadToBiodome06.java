@@ -5,6 +5,10 @@ import java.util.Arrays;
 // 16 21 라인에 필터로 30이상만 배열형태로 만들면 된다.
 
 public class RoadToBiodome06 {
+
+    private static final int MIN = 0;
+    private static final int MAX = 100;
+
     public static void main(String[] args) {
         if (args.length != 2) {
             System.out.println("2개의 배열을 입력해주세요");
@@ -12,25 +16,24 @@ public class RoadToBiodome06 {
         }
 
         try {
-            //정수형 배열로 변환
-            int[] numbers1 = Arrays.stream(args[0].replaceAll("\\[|\\]", "").split(",\\s*"))
+            //정수형 배열로 변환 //수전 전 코드
+            /*int[] numbers1 = Arrays.stream(args[0].replaceAll("\\[|\\]", "").split(",\\s*"))
                     .mapToInt(Integer::parseInt)
                     .sorted()
-                    //.filter(n -> n >= 30) 보너스 과제
-                    .toArray();
+                    //.filter(n -> n >= 30) //보너스 과제
+                    .toArray();*/
 
-            int[] numbers2 = Arrays.stream(args[1].replaceAll("\\[|\\]", "").split(",\\s*"))
-                    .mapToInt(Integer::parseInt)
-                    .sorted()
-                    //.filter(n -> n >= 30) 보너스 과제
-                    .toArray();
+            int[] numbers1 = parseAndValidate(args[0]);
+            int[] numbers2 = parseAndValidate(args[1]);
 
             //유효성 검사 anyMatch 하나라도 범위를 벗어나면 true 반환해서 종료     all, none, any 3가지 존재
-            if (Arrays.stream(numbers1).anyMatch(n -> n < 0 || n > 100) ||
+            //메서드화 수정전 유효성 검사 코드
+            /*if (Arrays.stream(numbers1).anyMatch(n -> n < 0 || n > 100) ||
                     Arrays.stream(numbers2).anyMatch(n -> n < 0 || n > 100)) {
                 System.out.println("0~100 범위를 벗어난 값이 있습니다.");
                 System.exit(0);
-            }
+            }*/
+
             //배열 크기
             int n = numbers1.length;
             int m = numbers2.length;
@@ -38,7 +41,7 @@ public class RoadToBiodome06 {
             double cV = centerValue(numbers1, numbers2, n, m);
             double aV = averValue(numbers1, numbers2, n, m);
             System.out.println(args[0] + " " + args[1]);
-            System.out.printf("Mean : %.1f " , aV);
+            System.out.printf("Mean : %.1f ", aV);
             //double 타입의 printf 는 자동으로 반올림해준다
             System.out.print("Median : " + cV);
 
@@ -49,15 +52,15 @@ public class RoadToBiodome06 {
 
     }
 
-    private static double averValue(int[] numbers1, int[] numbers2, int n, int m){
+    private static double averValue(int[] numbers1, int[] numbers2, int n, int m) {
         int sumLen = n + m;
         int sum = 0;
 
-        for(int number : numbers1){
+        for (int number : numbers1) {
             sum += number;
         }
 
-        for(int number : numbers2){
+        for (int number : numbers2) {
             sum += number;
         }
 
@@ -90,8 +93,21 @@ public class RoadToBiodome06 {
         return (sumLen % 2 == 0) ? (val1 + value) / 2.0 : val1;
     }
 
+    private static int[] parseAndValidate(String arg) {
+        return Arrays.stream(arg.replaceAll("\\[|\\]", "").split(",\\s*"))
+                .mapToInt(s -> {
+                    int v = Integer.parseInt(s.trim());
+                    if (v < MIN || v > MAX) {
+                        throw new IllegalArgumentException(MIN + "~" + MAX + " 범위를 벗어난 값이 있습니다.");
+                    }
+                    return v;
+                })
+                .sorted()
+                .toArray();
+    }
+
 }
 
 
-
+// 배운점 유효성 검사 범위는 상수화 , 반복되는 구문은 메서드화 시켜서 작업할 것
 

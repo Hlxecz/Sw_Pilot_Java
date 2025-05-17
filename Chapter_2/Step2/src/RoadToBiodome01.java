@@ -14,8 +14,6 @@ public class RoadToBiodome01 {
         // a,    b,  c -> [a,b,c]
         String[] tokens = args[0].replaceAll("\\[|\\]","").split(",\\s*");
 
-
-
         List<Integer> list = new ArrayList<>();
 
         try {
