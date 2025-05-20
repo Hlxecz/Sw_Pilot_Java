@@ -17,7 +17,7 @@ public class RoadToBiodome08 {
     }
 
     static boolean Enqueue(Integer value) {
-        //배열 사이즈가 가득 찼을 때 10늘어난 크기 복사
+        //배열 사이즈가 가득 찼을 때 10 늘어난 크기 복사
         if (size == MyQueue.length) {
             MyQueue = Arrays.copyOf(MyQueue, MyQueue.length + 10);
             System.out.printf("Queue의 크기가 %d으로 늘어났습니다.\n", MyQueue.length);
