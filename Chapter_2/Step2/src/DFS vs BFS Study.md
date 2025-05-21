@@ -98,10 +98,11 @@ while (!stack.isEmpty()) {
         }
     }
 }
-```
+```   
 </details>
 
 <details> <summary>BFS (Queue 사용)</summary>
+
 ```java
 Queue<Integer> queue = new LinkedList<>();
 queue.offer(start);
