@@ -16,7 +16,7 @@ public class RoadToBiodome08 {
         System.out.println("모든 요청이 처리되었습니다.");
     }
 
-    static boolean Enqueue(Integer value) {
+    static void Enqueue(Integer value) { //삽입
         //배열 사이즈가 가득 찼을 때 10 늘어난 크기 복사
         if (size == MyQueue.length) {
             MyQueue = Arrays.copyOf(MyQueue, MyQueue.length + 10);
@@ -27,10 +27,9 @@ public class RoadToBiodome08 {
         //선형 큐 단점 보완 -> 원형 큐 빈 공간 재사용
         rear = (rear + 1) % MyQueue.length;
         size++;
-        return true;
     }
 
-    static Integer Dequeue() {
+    static Integer Dequeue() { //삭제
         if (isEmpty()) return null;
         Integer data = MyQueue[front];
         //선형 큐 단점 보완 -> 원형 큐 빈 공간 재사용
@@ -39,12 +38,9 @@ public class RoadToBiodome08 {
         return data;
     }
 
-    static Integer peek() {
-        if (isEmpty()) return null;
-        return MyQueue[front];
-    }
-
     static boolean isEmpty() {
         return size == 0;
     }
+
 }
+

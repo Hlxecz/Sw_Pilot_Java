@@ -16,21 +16,19 @@ public class RoadToBiodome06 {
         }
 
         try {
-            //정수형 배열로 변환 //수전 전 코드
-            /*int[] numbers1 = Arrays.stream(args[0].replaceAll("\\[|\\]", "").split(",\\s*"))
-                    .mapToInt(Integer::parseInt)
-                    .sorted()
-                    //.filter(n -> n >= 30) //보너스 과제
-                    .toArray();*/
-
             int[] numbers1 = parseAndValidate(args[0]);
             int[] numbers2 = parseAndValidate(args[1]);
 
+            /*//정수형 배열로 변환 //수전 전 코드
+            int[] numbers1 = Arrays.stream(args[0].replaceAll("\\[|\\]", "").split(",\\s*"))
+                    .mapToInt(Integer::parseInt)
+                    .sorted()
+                    //.filter(n -> n >= 30) //보너스 과제
+                    .toArray();
 
-
-            //유효성 검사 anyMatch 하나라도 범위를 벗어나면 true 반환해서 종료     all, none, any 3가지 존재
-            //메서드화 수정전 유효성 검사 코드
-            /*if (Arrays.stream(numbers1).anyMatch(n -> n < 0 || n > 100) ||
+            유효성 검사 anyMatch 하나라도 범위를 벗어나면 true 반환해서 종료     all, none, any 3가지 존재
+            메서드화 수정전 유효성 검사 코드
+            if (Arrays.stream(numbers1).anyMatch(n -> n < 0 || n > 100) ||
                     Arrays.stream(numbers2).anyMatch(n -> n < 0 || n > 100)) {
                 System.out.println("0~100 범위를 벗어난 값이 있습니다.");
                 System.exit(0);
@@ -94,9 +92,9 @@ public class RoadToBiodome06 {
 
         return (sumLen % 2 == 0) ? (val1 + value) / 2.0 : val1;
     }
-
+    // "[2, 30, 10]" "[42, 1, 40, 27, 9]”
     private static int[] parseAndValidate(String arg) {
-        return Arrays.stream(arg.replaceAll("\\[|\\]", "").split(",\\s*"))
+        return Arrays.stream(arg.replaceAll("\\[|\\]", "").split(",\\s*")) //string[] "1" "2" "3" 반환
                 .mapToInt(s -> {
                     int v = Integer.parseInt(s.trim());
                     if (v < MIN || v > MAX) {
@@ -104,6 +102,7 @@ public class RoadToBiodome06 {
                     }
                     return v;
                 })
+                //.filter(n -> n >= 30) //보너스 과제
                 .sorted()
                 .toArray();
     }
