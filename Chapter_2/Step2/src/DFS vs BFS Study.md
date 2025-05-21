@@ -98,20 +98,5 @@ while (!stack.isEmpty()) {
         }
     }
 }
-
-</details> <details> <summary>BFS (Queue 사용)</summary>
-
-Queue<Integer> queue = new LinkedList<>();
-queue.offer(start);
-visited[start] = true;
-
-while (!queue.isEmpty()) {
-    int current = queue.poll();
-    for (int i = 0; i < graph.length; i++) {
-        if (!visited[i] && graph[current][i]) {
-            visited[i] = true;
-            queue.offer(i);
-        }
-    }
-}
-</details> ```
+```
+</details>
