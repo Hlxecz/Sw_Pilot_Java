@@ -12,12 +12,13 @@
 - 미로찾기, 퍼즐, 조합 등에서 사용됨
 
 ### ✅ 예시 순서
-그래프 구조:
-1
-/
-2 3
-/
-4 5
+` ```text
+    1
+   / \
+  2   3
+ /     \
+4       5
+``` `
 
 DFS 탐색 순서: 1 → 2 → 4 → 3 → 5
 
@@ -43,17 +44,15 @@ markdown
 
 ### ✅ 예시 순서
 그래프 구조:
-1
-/
-2 3
-/
-4 5
-
+` ```text
+    1
+   / \
+  2   3
+ /     \
+4       5
+``` `
 BFS 탐색 순서: 1 → 2 → 3 → 4 → 5
 
-yaml
-복사
-편집
 
 ### 🎫 비유
 > 놀이공원 입장 줄처럼 먼저 온 순서대로 처리 → 넓게 퍼지며 탐색
@@ -109,13 +108,13 @@ queue.offer(start);
 visited[start] = true;
 
 while (!queue.isEmpty()) {
-int current = queue.poll();
-for (int i = 0; i < graph.length; i++) {
-if (!visited[i] && graph[current][i]) {
-visited[i] = true;
-queue.offer(i);
-}
-}
+    int current = queue.poll();
+    for (int i = 0; i < graph.length; i++) {
+        if (!visited[i] && graph[current][i]) {
+            visited[i] = true;
+            queue.offer(i);
+        }
+    }
 }
 ```
 </details> 
