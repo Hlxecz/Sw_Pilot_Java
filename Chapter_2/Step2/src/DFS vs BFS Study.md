@@ -97,12 +97,10 @@ while (!stack.isEmpty()) {
             stack.push(i);
         }
     }
-}```
+}
+
 </details> <details> <summary>BFS (Queue 사용)</summary>
 
-java
-복사
-편집
 Queue<Integer> queue = new LinkedList<>();
 queue.offer(start);
 visited[start] = true;
