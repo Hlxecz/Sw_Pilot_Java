@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class RoadToBiodome10 {
@@ -24,13 +26,41 @@ public class RoadToBiodome10 {
         }
 
         int cnt = 0;
+
         for (int i = 0; i < exist.length; i++) {
             if (!visited[i] && exist[i]) {
                 dfs(i);
                 cnt++;
             }
         }
-        System.out.printf("%d 가지의 연관관계가 있습니다.",cnt);
+
+//        for (int i = 0; i < exist.length; i++) {
+//            if (!visited[i] && exist[i]) {
+//                bfs(i);
+//                cnt++;
+//            }
+//        }
+        System.out.printf("DFS -> %d 가지의 연관관계가 있습니다.\n",cnt);
+//        System.out.printf("BFS -> %d 가지의 연관관계가 있습니다.",cnt);
+    }
+
+    private static void bfs(int flower) {
+        Queue<Integer> que = new LinkedList<>();
+        visited[flower] = true;
+        que.offer(flower);
+
+        while (!que.isEmpty()) {
+            int rene = que.poll();
+
+            for (int i = 0; i < exist.length; i++) {
+                if (!visited[i] && realationShip[rene][i]) {
+                    visited[i] = true;
+                    que.offer(i);
+                }
+            }
+
+        }
+
     }
 
 
