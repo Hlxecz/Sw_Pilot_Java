@@ -65,7 +65,7 @@ public class LifeNest {
                 this.getClass().getSimpleName(), target.getName(), field);
     }
 
-    public Organism findList(String name) {
+    private Organism findList(String name) {
         for (Organism o : organismList) {
             if (o.getName().equals(name)) return o;
         }
