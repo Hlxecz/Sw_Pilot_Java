@@ -15,25 +15,13 @@ public class Organism {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSpecies() {
         return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
     }
 
 
     public String getHabitat() {
         return habitat;
-    }
-
-    public void setHabitat(String habitat) {
-        this.habitat = habitat;
     }
 
     public void displayInfo(){

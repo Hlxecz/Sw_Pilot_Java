@@ -9,10 +9,11 @@ public class BiodomeFamily01 {
         list.addList(new Organism("페퍼민트","식물","정원"));
         list.findAll();
         
-        list.remove("펭귄");
+        list.remove("코알라");
+        list.remove("선인장");
         list.findAll();
 
         //보너스과제
-        list.searchOrganismByName("선인장");
+        list.searchOrganismByName("펭귄");
     }
 }
