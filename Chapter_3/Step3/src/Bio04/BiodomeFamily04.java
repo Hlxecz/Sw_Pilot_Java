@@ -17,6 +17,6 @@ public class BiodomeFamily04 {
         geo.useEnergy(30);
 
         EnergyManager.TotalEnergy(solar, wind, geo);
-
+        //static 메서드로 클래스 명으로 접근 가능
     }
 }
