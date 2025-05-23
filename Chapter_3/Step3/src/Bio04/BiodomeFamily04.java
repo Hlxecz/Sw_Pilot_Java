@@ -14,9 +14,9 @@ public class BiodomeFamily04 {
         System.out.println("====== 에너지 사용 ======");
         solar.useEnergy(30);
         wind.useEnergy(30);
-        geo.useEnergy(60);
+        geo.useEnergy(30);
 
-        EnergyManager.TotalAmount();
+        EnergyManager.TotalEnergy(solar, wind, geo);
 
     }
 }

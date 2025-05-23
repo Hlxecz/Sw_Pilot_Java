@@ -9,7 +9,7 @@ public class WindEnergy extends EnergySource{
     @Override
     void produceEnergy(int speed) {
         int energyAmount = speed / 5;
-        EnergyManager.addTotal(energyAmount);
-        System.out.println(super.getSourceName() + "에너지를 " + energyAmount + " 생산했습니다.");
+        addEnergyAmount(energyAmount);
+        System.out.println(super.getSourceName() + "에너지를 " + energyAmount +" 생산했습니다.");
     }
 }

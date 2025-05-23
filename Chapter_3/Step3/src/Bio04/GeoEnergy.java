@@ -9,7 +9,7 @@ public class GeoEnergy extends EnergySource{
     @Override
     void produceEnergy(int temperature) {
         int energyAmount = (temperature * 5) + 20;
-        EnergyManager.addTotal(energyAmount);
+        addEnergyAmount(energyAmount);
         System.out.println(super.getSourceName() + "에너지를 " + energyAmount +" 생산했습니다.");
     }
 }
