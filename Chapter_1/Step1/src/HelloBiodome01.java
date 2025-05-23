@@ -12,12 +12,6 @@ public class HelloBiodome01 {
             String name = String.join(" ",args);
             System.out.printf(" \"%s\" 님 ! 스프링와트에 오신것 환영합니다 !",name);
         }
-
-
-
-
-
-        woejfowejnf
         else{
             System.out.println("\n한 글자 이상 입력해주세요.");
             }

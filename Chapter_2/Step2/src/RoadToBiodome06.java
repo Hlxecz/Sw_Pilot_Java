@@ -89,9 +89,10 @@ public class RoadToBiodome06 {
             if (count == mid1) val1 = value;
             count++;
         }
-
+        
         return (sumLen % 2 == 0) ? (val1 + value) / 2.0 : val1;
     }
+
     // "[2, 30, 10]" "[42, 1, 40, 27, 9]”
     private static int[] parseAndValidate(String arg) {
         return Arrays.stream(arg.replaceAll("\\[|\\]", "").split(",\\s*")) //string[] "1" "2" "3" 반환
