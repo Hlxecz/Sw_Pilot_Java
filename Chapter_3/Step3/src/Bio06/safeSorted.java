@@ -1,5 +1,7 @@
 package Bio06;
 
+import Bio06.Enum.AnimalType;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,11 +13,11 @@ public class safeSorted {
         List<Animal> babyElephants = new LinkedList<>() ;
 
         for (Animal a : list) {
-            if (a.getName().equals("사슴")) {
+            if (a.getType() == AnimalType.DEER) {
                 deers.add(a); //여러마리 사슴
-            } else if (a.getName().equals("호랑이")) {
+            } else if (a.getType() == AnimalType.TIGER) {
                 tiger = a;
-            } else if (a.getName().equals("코끼리") && a.getAge() <= 5) {
+            } else if (a.getType() == AnimalType.ELEPHANT && a.getAge() <= 5) {
                 babyElephants.add(a); //여러마리 코끼리
             } else {
                 frontList.add(a); // 원숭이, 코뿔소 등
