@@ -12,7 +12,7 @@ public class ManagerSong extends Song{
 
     @Override
     public String toString() {
-        return "\"" + super.getTitle() + ", " + super.getDuration() + ", " + songType + "\"";
+        return "\"" + super.getTitle() + ", " + super.getDuration() + "분 , " + super.getArtist() +", " + songType + "\"";
 
     }
 }

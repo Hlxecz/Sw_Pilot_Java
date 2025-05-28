@@ -1,7 +1,6 @@
 package Bio07;
 
 import Bio07.Enum.AnimalType;
-import Bio07.Enum.PersonType;
 
 public class AnimalSong extends Song{
 
@@ -14,7 +13,7 @@ public class AnimalSong extends Song{
 
     @Override
     public String toString() {
-        return "\"" + super.getTitle() + ", " + super.getDuration() + ", " + targetAnimal + "\"";
+        return "\"" + super.getTitle() + ", " + super.getDuration() + "분 , " + super.getArtist() +", " + targetAnimal + "\"";
 
     }
 }
