@@ -1,22 +1,26 @@
 package Bio08;
 
+import Bio08.Enum.SessionStatus;
 import Bio08.Interface.SessionManager;
 
 import java.time.LocalDateTime;
 
 public class NomalMember extends Member implements SessionManager {
+    Club club;
 
-    public NomalMember(String name, LocalDateTime joinDate) {
+    public NomalMember(String name, LocalDateTime joinDate,Club club) {
         super(name, joinDate);
+        this.club = club;
     }
 
-    public NomalMember(String name, LocalDateTime joinDate, String skillLevel) {
+    public NomalMember(String name, LocalDateTime joinDate, String skillLevel,Club club) {
         super(name, joinDate, skillLevel);
+        this.club = club;
     }
 
     @Override
-    public void createSession(Session session) {
-        System.out.println("날짜와");
+    public void createSession(LocalDateTime date, String location) {
+         club.addSession(new Session(date,location,this, SessionStatus.OPENED));
     }
 
     @Override
