@@ -50,7 +50,7 @@ public class ReportPrinter {
 
 ### 📷 개념 설명 이미지
 
-* ![OCP.png](OCP.png)
+<img src="OCP.png" width="400"/>
 
 ### 💡 Tip
 
@@ -90,7 +90,7 @@ class OrderService {
 
 ### 📷 개념 설명 이미지
 
-* ![LSP.png](LSP.png)
+<img src="LSP.png" width="400"/>
 
 ### 💡 Tip
 
@@ -119,7 +119,7 @@ myData = new HashSet<>();
 
 ### 📷 개념 설명 이미지
 
-* ![ISP.png](ISP.png)
+<img src="ISP.png" width="400"/>
 
 ### 💡 Tip
 
@@ -153,7 +153,7 @@ class BasicPrinter implements Printer {
 
 ### 📷 개념 설명 이미지
 
-* ![DIP.png](DIP.png)
+<img src="DIP.png" width="400"/>
 
 ### 💡 Tip
 
