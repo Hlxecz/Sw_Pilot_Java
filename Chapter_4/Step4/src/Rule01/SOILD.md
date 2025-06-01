@@ -18,7 +18,7 @@
 
 ### 📷 개념 설명 이미지
 
-* ![SRP.png](SRP.png)
+<img src="SRP.png" width="400"/>
 
 ### 💡 Tip
 
