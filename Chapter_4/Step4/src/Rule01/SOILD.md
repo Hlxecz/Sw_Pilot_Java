@@ -153,7 +153,7 @@ class BasicPrinter implements Printer {
 
 ### 📷 개념 설명 이미지
 
-<img src="DIP.png" width="400"/>
+<img src="./png/DIP.png" width="400"/>
 
 ### 💡 Tip
 
