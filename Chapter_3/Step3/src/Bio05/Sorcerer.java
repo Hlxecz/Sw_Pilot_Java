@@ -36,19 +36,25 @@ public class Sorcerer {
                         "의 능력을 확인합니다.\n");
                 list.describe();
 
-                if (list instanceof SolarStone) {
-                    System.out.println("마법사 '" + name + "'이 " + list.getName() +
-                            "의 에너지 생성능력을 사용합니다.");
-                    ((SolarStone) list).generateEnergy();
-                } else if (list instanceof WindAmulet) {
-                    System.out.println("마법사 '" + name + "'이 " + list.getName() +
-                            "의 날씨 조절 능력을 사용합니다.");
-                    ((WindAmulet) list).controlWeather();
-                } else if (list instanceof WaterMirror) {
-                    System.out.println("마법사 '" + name + "'이 " + list.getName() +
-                            "의 에너지 생성능력을 사용합니다.");
-                    ((WaterMirror) list).generateEnergy();
-                    ((WaterMirror) list).controlWeather();
+                switch (list) {
+                    case SolarStone solarStone -> {
+                        System.out.println("마법사 '" + name + "'이 " + list.getName() +
+                                "의 에너지 생성능력을 사용합니다.");
+                        solarStone.generateEnergy();
+                    }
+                    case WindAmulet windAmulet -> {
+                        System.out.println("마법사 '" + name + "'이 " + list.getName() +
+                                "의 날씨 조절 능력을 사용합니다.");
+                        windAmulet.controlWeather();
+                    }
+                    case WaterMirror waterMirror -> {
+                        System.out.println("마법사 '" + name + "'이 " + list.getName() +
+                                "의 에너지 생성능력을 사용합니다.");
+                        waterMirror.generateEnergy();
+                        waterMirror.controlWeather();
+                    }
+                    default -> {
+                    }
                 }
 
             }

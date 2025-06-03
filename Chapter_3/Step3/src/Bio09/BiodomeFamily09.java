@@ -28,7 +28,6 @@ public class BiodomeFamily09 {
         SandWich ham = new SandWich(HAM);
         SandWich cheese = new SandWich(CHEESE); // 유통기한 지난 것
 
-
         System.out.println("커피가 추가되었습니다. " + BLEND);
         System.out.println("커피가 추가되었습니다. " + DARK);
         System.out.println("커피가 추가되었습니다. " + DECAF);
@@ -40,6 +39,7 @@ public class BiodomeFamily09 {
         System.out.println("샌드위치가 추가되었습니다. " + vegetable);
         System.out.println("샌드위치가 추가되었습니다. " + ham);
         System.out.println("샌드위치가 추가되었습니다. " + cheese);
+
 
 
         System.out.println();

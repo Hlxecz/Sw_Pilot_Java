@@ -1,6 +1,5 @@
 package Bio06.Enum;
 
-
 public enum AnimalType{
     MONKEY("원숭이"), TIGER("호랑이"), DEER("사슴"), ELEPHANT("코끼리"), RHINOCEROS("코뿔소");
 
@@ -22,5 +21,4 @@ public enum AnimalType{
         }
         throw new Exception("5가지 동물에 포함되지 않습니다.");
     }
-
 }
