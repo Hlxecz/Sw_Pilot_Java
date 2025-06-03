@@ -13,6 +13,14 @@ public abstract class User {
         this.borrowList = borrowList;
     }
 
+    public void addBorrowBookList(Book book){
+        borrowList.add(book);
+    }
+
+    public List<Book> getBorrowList(){
+        return borrowList;
+    }
+
     public String getUserId() {
         return userId;
     }

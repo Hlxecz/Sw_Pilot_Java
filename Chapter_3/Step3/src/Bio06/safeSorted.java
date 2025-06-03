@@ -1,7 +1,6 @@
 package Bio06;
 
 import Bio06.Enum.AnimalType;
-
 import java.util.LinkedList;
 import java.util.List;
 
