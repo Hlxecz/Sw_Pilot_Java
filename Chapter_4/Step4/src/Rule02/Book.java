@@ -1,5 +1,4 @@
 package Rule02;
-
 public class Book {
     private String isbn;
     private String title;
@@ -13,39 +12,42 @@ public class Book {
         this.isBorrowed = false;
     }
 
-    public boolean getBorrowed() {
-        return isBorrowed;
+    public void borrow() {
+        this.isBorrowed = true;
     }
 
-    public void setBorrowed(boolean borrowed) {
-        isBorrowed = borrowed;
+    public void returnBook() {
+        this.isBorrowed = false;
+    }
+
+    public boolean getBorrowed() {
+        return isBorrowed;
     }
 
     public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public boolean isTextbook() {
+        return false;
     }
 
-    public String toString(){
+    public boolean isMagazine() {
+        return false;
+    }
+
+    @Override
+    public String toString() {
         return "'" + title + "' , '" + author + "'";
     }
+
+
 }
