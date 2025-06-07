@@ -1,5 +1,8 @@
 package Rule04;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Stack;
 
 public class BiologicalSystem<T> {
@@ -41,4 +44,22 @@ public class BiologicalSystem<T> {
             System.out.println("생물 정보 리스트가 비어있지 않습니다.");
         }
     }
+
+    public void sortByName() {
+        if (stack.isEmpty()) {
+            System.out.println("정렬할 생물이 없습니다.");
+            return;
+        }
+
+        List<T> list = new ArrayList<>(stack);
+        list.sort(Comparator.comparing(e -> ((BiologicalEntity<?>) e).getName()));
+
+        stack.clear();
+        for(T s : list){
+            stack.push(s);
+        }
+        System.out.println("이름순으로 정렬이 완료되었습니다.");
+    }
 }
+
+

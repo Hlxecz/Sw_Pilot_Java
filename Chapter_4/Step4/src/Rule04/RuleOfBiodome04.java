@@ -37,20 +37,32 @@ public class RuleOfBiodome04 {
         system.add(cherry);
         system.add(ecoli);
         system.add(bacillus);
+        //최신 등록 생물
+        system.show();
 
-        //생물 삭제
-        system.delete();
+        //정렬
+        system.sortByName();
 
         //최신 등록 생물
         system.show();
 
+        //생물 삭제
+        system.delete();
+
+
         //비었는지 확인
         system.isEmpty();
+
 
         //전체 삭제
         system.clear();
 
         //비었는지 확인
         system.isEmpty();
+
     }
 }
+
+
+/*고양이 얼룩말 로즈마리 벚꽃 이콜라이 바실러스
+고양이 로즈마리 바실러스 벚꽃 얼룩말 이콜라이 순정렬*/
