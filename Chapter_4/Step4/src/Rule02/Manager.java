@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Manager extends User implements Borrowable {
+
     public Manager(String userId, String name, List<Book> borrowList) {
         super(userId, name, borrowList);
     }
