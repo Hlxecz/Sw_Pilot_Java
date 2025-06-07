@@ -3,8 +3,6 @@ package Rule03;
 
 import Rule03.Device.SmartDevice;
 import Rule03.Inteface.Device;
-import Rule03.Inteface.FeatureActivatable;
-
 
 import java.util.List;
 
