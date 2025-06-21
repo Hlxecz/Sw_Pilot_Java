@@ -1,6 +1,6 @@
 package Rule04;
 
-import Rule04.Enum.BioType;
+import Rule04.Enum.*;
 
 public class BiologicalEntity<T> {
     private String name;

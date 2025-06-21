@@ -1,9 +1,7 @@
 package Rule04;
 
-import Rule04.BioType.AnimalFeature;
-import Rule04.BioType.MicrobeFeature;
-import Rule04.BioType.PlantFeature;
-import Rule04.Enum.BioType;
+import Rule04.BioType.*;
+import Rule04.Enum.*;
 
 public class RuleOfBiodome04 {
     public static void main(String[] args) {

@@ -53,7 +53,7 @@ public class BiologicalSystem<T> {
 
         List<T> list = new ArrayList<>(stack);
 
-        list.sort(Comparator.comparing(e -> ((BiologicalEntity<?>) e).getName()));
+        list.sort(Comparator.comparing(e -> ((BiologicalEntity<?>) e).getName()).reversed());
 
         stack.clear();
         for(T s : list){
